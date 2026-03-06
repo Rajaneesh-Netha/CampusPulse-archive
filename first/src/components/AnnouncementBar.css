@@ -1,0 +1,42 @@
+.announcement-bar {
+  background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-midnight-blue) 100%);
+  color: var(--color-text-light);
+  padding: 0.75rem 0;
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.announcement-content {
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.ticker {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline;
+  margin-right: 2rem;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+  }
+}
