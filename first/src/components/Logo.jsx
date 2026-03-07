@@ -55,11 +55,10 @@ export default function Logo() {
         />
 
         {/* Campus nodes - representing different campus locations/facilities */}
-        <circle cx="30" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
-        <circle cx="90" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
-        <circle cx="150" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
-        <circle cx="210" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
-        <circle cx="270" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
+       <circle cx="40" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
+<circle cx="110" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
+<circle cx="180" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
+<circle cx="250" cy="60" r="8" fill="url(#nodeGradient)" className="campus-node" />
 
         {/* Communication signals emanating from nodes */}
         <g className="signal-lines">
@@ -71,31 +70,30 @@ export default function Logo() {
           <line x1="150" y1="60" x2="165" y2="75" stroke="var(--color-soft-cyan)" strokeWidth="1.5" opacity="0.8" />
           <line x1="210" y1="60" x2="225" y2="45" stroke="var(--color-soft-cyan)" strokeWidth="1.5" opacity="0.8" />
           <line x1="210" y1="60" x2="225" y2="75" stroke="var(--color-soft-cyan)" strokeWidth="1.5" opacity="0.8" />
-          <line x1="270" y1="60" x2="255" y2="45" stroke="var(--color-soft-cyan)" strokeWidth="1.5" opacity="0.8" />
-          <line x1="270" y1="60" x2="255" y2="75" stroke="var(--color-soft-cyan)" strokeWidth="1.5" opacity="0.8" />
         </g>
 
         {/* Text */}
-        <text
-          x="150"
-          y="95"
-          textAnchor="middle"
-          className="logo-text"
-          fill="url(#logoGradient)"
-        >
-          CampusPulse
-        </text>
+           {/* Main Logo Text */}
+<text
+  x="150"
+  y="85"
+  textAnchor="middle"
+  className="logo-text"
+  fill="url(#logoGradient)"
+>
+  CampusPulse
+</text>
 
-        {/* Tagline */}
-        <text
-          x="150"
-          y="110"
-          textAnchor="middle"
-          className="logo-tagline"
-          fill="var(--color-midnight-blue)"
-        >
-          Connect • Report • Resolve
-        </text>
+{/* Tagline */}
+<text
+  x="150"
+  y="107"
+  textAnchor="middle"
+  className="logo-tagline"
+  fill="white"
+>
+  CONNECT • REPORT • RESOLVE
+</text>
       </svg>
     </div>
   );

@@ -1,42 +1,54 @@
 .announcement-bar {
-  background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-midnight-blue) 100%);
-  color: var(--color-text-light);
-  padding: 0.75rem 0;
-  margin-top: 60px;
+  background: linear-gradient(90deg, #1e3a8a, #0f172a);
+  color: white;
+  padding: 12px 0;
+  margin-top: 110px;   /* changed */
   overflow: hidden;
-  position: relative;
-  font-weight: 500;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px var(--color-shadow);
+
+  border: 3px solid red;
 }
 
 .announcement-content {
-  max-width: 1200px;
-  padding: 0 1rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .ticker {
-  display: inline-block;
-  animation: scroll-left 30s linear infinite;
+  display: inline-flex;
   white-space: nowrap;
+  animation: ticker-scroll 25s linear infinite;
 }
 
 .ticker-item {
-  display: inline;
-  margin-right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 50px;
 }
 
-@keyframes scroll-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.separator {
+  margin: 0 15px;
+  opacity: 0.7;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
   .announcement-bar {
+    margin-top: 85px;
     font-size: 0.85rem;
-    padding: 0.5rem 0;
   }
 }
