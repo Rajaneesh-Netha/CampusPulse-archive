@@ -1,28 +1,27 @@
 import "./AnnouncementBar.css";
 
-export default function AnnouncementBar() {
-
-  const messages = [
-    "CampusPulse is currently in beta – explore the platform and share feedback",
-    "Report campus issues easily and track resolution in real time",
-    "Built for CBIT students to improve campus communication",
-    "Your voice matters – help improve the campus with CampusPulse"
-  ];
-
-  const infiniteMessages = [...messages, ...messages];
-
-  return (
+export default function AnnouncementBar(){
+  return(
     <div className="announcement-bar">
-      <div className="announcement-content">
-        <div className="ticker">
-          {infiniteMessages.map((msg, index) => (
-            <span key={index} className="ticker-item">
-              {msg}
-              <span className="separator">•</span>
-            </span>
-          ))}
+
+      <div className="announcement-wrapper">
+
+        <div className="announcement-content">
+          <span>🚀 CampusPulse is currently in beta – explore the platform</span>
+          <span>📢 Your voice matters – improve the campus with CampusPulse</span>
+          <span>🎓 Built by CBIT students to improve campus communication</span>
+          <span>⚡ Submit complaints and track issue resolution</span>
         </div>
+
+        <div className="announcement-content">
+          <span>🚀 CampusPulse is currently in beta – explore the platform</span>
+          <span>📢 Your voice matters – improve the campus with CampusPulse</span>
+          <span>🎓 Built by CBIT students to improve campus communication</span>
+          <span>⚡ Submit complaints and track issue resolution</span>
+        </div>
+
       </div>
+
     </div>
-  );
+  )
 }

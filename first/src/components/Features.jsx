@@ -1,4 +1,5 @@
 import './Features.css';
+import { FaBrain, FaClock, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 
 const FeatureCard = ({ icon, title, description, delay }) => {
   return (
@@ -11,55 +12,59 @@ const FeatureCard = ({ icon, title, description, delay }) => {
   );
 };
 
-import { FaPencilAlt, FaBrain, FaClock, FaUserSecret } from 'react-icons/fa';
-
 export default function Features() {
+
   const features = [
     {
-      icon: <FaPencilAlt />,
-      title: 'Easy Complaint Submission',
-      description: 'Students can quickly report issues related to hostel, academics, maintenance, or safety through a simple interface.'
-    },
-    {
       icon: <FaBrain />,
-      title: 'AI-Powered Complaint Categorization',
-      description: 'The system automatically classifies complaints using AI to ensure faster and more accurate handling.'
+      title: 'Smart Complaint Categorization',
+      description:
+        'AI-powered system automatically categorizes complaints for efficient routing and faster resolution.'
     },
     {
       icon: <FaClock />,
-      title: 'Real-Time Complaint Tracking',
-      description: 'Students can track the status of their complaints and receive updates until the issue is resolved.'
+      title: 'Real-Time Status Tracking',
+      description:
+        'Monitor complaint progress in real-time with instant updates and detailed status information.'
     },
     {
-      icon: <FaUserSecret />,
-      title: 'Anonymous Feedback Option',
-      description: 'Users can submit complaints anonymously while the system detects spam or duplicate reports using AI.'
+      icon: <FaChartLine />,
+      title: 'Data-Driven Insights',
+      description:
+        'Comprehensive analytics provide valuable insights to improve campus services and operations.'
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: 'Role-Based Access',
+      description:
+        'Secure access control ensures appropriate permissions for students, staff, and administrators.'
     }
   ];
 
   return (
     <section className="features">
+
       <div className="features-container">
+
         <div className="features-header" data-aos="fade-down">
           <h2 className="features-title">Features We Provide</h2>
-          <p className="features-subtitle">Everything you need to make your voice heard</p>
+          <p className="features-subtitle">
+            Everything you need to make your voice heard
+          </p>
         </div>
 
         <div className="features-grid">
           {features.map((feature, index) => (
-            <FeatureCard 
+            <FeatureCard
               key={index}
               {...feature}
               delay={index * 100}
             />
           ))}
         </div>
+
       </div>
 
-      <div className="features-background">
-        <div className="gradient-blur blur-1"></div>
-        <div className="gradient-blur blur-2"></div>
-      </div>
     </section>
   );
 }

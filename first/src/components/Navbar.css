@@ -1,89 +1,159 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(247, 250, 252, 0.95);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px var(--color-shadow);
-  z-index: 1000;
-  transition: all 0.3s ease;
-  padding: 0.75rem 0;
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:75px;
+
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(20px);
+
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 8px 32px rgba(31,38,135,0.2);
+
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
 }
 
-.navbar:hover {
-  background: rgba(247, 250, 252, 0.98);
-  box-shadow: 0 4px 30px var(--color-shadow);
+
+/* CONTAINER */
+
+.navbar-container{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 2rem;
+
+  width:100%;
+  display:flex;
+  align-items:center;
 }
 
-.navbar-container {
-  max-width: 100%;
-  margin: 0;
-  padding: 0 1rem;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+/* LOGO AREA */
+
+.navbar-logo{
+  width:30%;
+  display:flex;
+  align-items:center;
 }
 
-.navbar-logo {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 75px;
+
+/* LOGO IMAGE */
+
+.cbit-logo{
+  height:74px;
+  width:auto;
+  object-fit:contain;
+
+  transform-origin:left center;
+  transition:transform .3s ease;
 }
 
-.cbit-logo {
-  height: 120%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  transition: all 0.3s ease;
+.cbit-logo:hover{
+  transform:scale(1.05);
 }
 
-.navbar-buttons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+
+/* MENU */
+
+.navbar-menu{
+  width:70%;
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+
+  gap:2rem;
 }
 
-/* BUTTON BASE */
 
-.btn-login,
-.btn-register{
-  padding:0.9rem 2.2rem;
-  border-radius:14px;
-  font-size:1.2rem;
-  font-weight:600;
-  cursor:pointer;
+/* LINKS */
+
+.nav-link{
+  color:#1a1a2e;
+  text-decoration:none;
+  font-weight:500;
+  font-size:1rem;
+
+  padding:.5rem 1rem;
+  border-radius:8px;
+
+  position:relative;
   transition:all .25s ease;
-  border:none;
-  color:rgb(252, 252, 252);
-  background:#2563eb;
-  box-shadow:0 6px 18px rgba(37,99,235,0.25);
 }
 
-/* HOVER EFFECT */
-
-.btn-login:hover,
-.btn-register:hover{
-  background:#01baf8;
+.nav-link:hover{
+  color:#667eea;
+  background:rgba(102,126,234,0.1);
   transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(37,99,235,0.35);
 }
-@media (max-width: 768px) {
-  .navbar-container {
-    padding: 0 1rem;
+
+
+/* UNDERLINE ANIMATION */
+
+.nav-link::after{
+  content:'';
+  position:absolute;
+
+  bottom:0;
+  left:50%;
+
+  width:0;
+  height:2px;
+
+  background:linear-gradient(135deg,#667eea,#764ba2);
+
+  transition:all .25s ease;
+  transform:translateX(-50%);
+}
+
+.nav-link:hover::after{
+  width:80%;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-link{
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:white !important;
+
+  padding:.5rem 1.5rem;
+  border-radius:25px;
+
+  box-shadow:0 4px 15px rgba(102,126,234,0.3);
+}
+
+.login-link:hover{
+  background:linear-gradient(135deg,#764ba2,#667eea);
+  box-shadow:0 6px 20px rgba(102,126,234,0.4);
+  transform:translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .navbar-logo{
+    width:40%;
   }
 
-  .cbit-logo {
-    max-height: 45px;
+  .navbar-menu{
+    width:60%;
+    gap:1rem;
   }
 
-  .btn-login,
-  .btn-register {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.85rem;
+  .nav-link{
+    font-size:.9rem;
+    padding:.4rem .8rem;
   }
+
+  .cbit-logo{
+    height:45px;
+  }
+
 }
