@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Deep Blue and Sand/Tan Palette - Modern SaaS Theme */
+  --color-deep-navy: #1a365d;        /* deep navy */
+  --color-midnight-blue: #2d3748;   /* midnight blue */
+  --color-ocean-blue: #3182ce;      /* ocean blue */
+  --color-soft-cyan: #4fd1c9;        /* soft cyan highlight */
+  --color-muted-gold: #d69e2e;       /* muted gold */
+  --color-warm-sand: #f7fafc;        /* warm sand */
+  --color-beige: #e2e8f0;            /* beige */
+  --color-tan: #cbd5e0;              /* tan */
+  --color-text-dark: #1a202c;        /* dark text */
+  --color-text-light: #ffffff;       /* light text */
+  --color-bg-primary: #f7fafc;       /* primary background */
+  --color-bg-secondary: #edf2f7;     /* secondary background */
+  --color-bg-tertiary: #e2e8f0;      /* tertiary background */
+  --color-border: rgba(74, 85, 104, 0.1);
+  --color-shadow: rgba(26, 54, 93, 0.1);
+  --color-glass: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg-primary);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-ocean-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-warm);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-teal), var(--color-warm));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-warm), var(--color-teal));
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(78, 205, 196, 0.3); /* teal */
+  color: var(--color-dark-text);
+}
+
+::-moz-selection {
+  background: rgba(78, 205, 196, 0.3);
+  color: var(--color-dark-text);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
